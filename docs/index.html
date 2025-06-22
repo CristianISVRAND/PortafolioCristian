@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio Cristian</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+<header class="navbar">
+  <div class="logo">Portafolio</span></div>
+
+  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+  <nav class="nav-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Mover el botón fuera de .nav-links -->
+  <button id="modo-btn" class="modo-toggle">
+    <i class="fas fa-sun"></i>
+    <span>Claro</span>
+  </button>
+</header>
+
+
+
+
+
+  <section class="hero" id="inicio">
+    <h1>Hola, soy <span>Cristian Ramirez</span></h1>
+    <p>Desarrollador Web apasionado por crear experiencias digitales increíbles</p>
+    <a href="#sobremi" class="btn-primary">Conoce más sobre mí</a>
+  </section>
+  <section id="sobremi" class="sobre-mi">
+    <div class="container">
+      <div class="contenido">
+        <div class="ilustracion">
+          <div class="emoji-circle">👨‍💻</div>
+        </div>
+        <div class="texto">
+          <h2>Sobre mí</h2>
+          <br>
+          <p style="margin-top: 2rem;">Soy un desarrollador apasionado con experiencia en tecnologías web modernas. Me
+            encanta resolver problemas
+            complejos y crear soluciones elegantes que generen impacto real.</p>
+          <p>Con más de [X años] de experiencia en el desarrollo web, he trabajado en proyectos diversos que van desde
+            aplicaciones web hasta sistemas complejos de backend.</p>
+
+          <p>Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades para mantenerme al día con las
+            últimas tendencias del desarrollo.</p> <a href="archivos/CristianRamirez.pdf" download
+            class="btn-descargar">Descargar CV</a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="habilidades" id="habilidades">
+    <div class="container">
+      <h2>Mis Habilidades</h2>
+      <br>
+      <div class="cards">
+        <div class="card">
+          <div class="icono">💻</div>
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, Ionic, WordPress</p>
+        </div>
+        <div class="card">
+          <div class="icono">⚙️</div>
+          <h3>Backend</h3>
+          <p>Node.js, scripts en Python, XAMPP</p>
+        </div>
+        <div class="card">
+          <div class="icono">💾</div>
+          <h3>Base de Datos</h3>
+          <p>Oracle PL/SQL, SQL, Power BI</p>
+        </div>
+        <div class="card">
+          <div class="icono">🎨</div>
+          <h3>Diseño</h3>
+          <p>Figma, UI/UX, Canva</p>
+        </div>
+
+      </div>
+  </section>
+
+  <section id="servicios" class="servicios">
+    <div class="container">
+      <h2>Mis Servicios</h2>
+      <br>
+      <div class="cards">
+        <div class="cards">
+          <div class="card">
+            <div class="icono"><i class="fas fa-code"></i></div>
+            <h3>Desarrollo Web</h3>
+            <p>Webs modernas con WordPress adaptadas a tus necesidades.</p>
+          </div>
+          <div class="card">
+            <div class="icono"><i class="fas fa-shopping-cart"></i></div>
+            <h3>Tienda Online</h3>
+            <p>E-commerce con WooCommerce y pagos integrados.</p>
+          </div>
+          <div class="card">
+            <div class="icono"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Diseño Responsivo</h3>
+            <p>Compatible con móviles, tablets y escritorio.</p>
+          </div>
+          <div class="card">
+            <div class="icono"><i class="fas fa-tools"></i></div>
+            <h3>Mantenimiento</h3>
+            <p>Soporte mensual, actualizaciones y respaldo.</p>
+          </div>
+          <div class="card">
+            <div class="icono"><i class="fas fa-tachometer-alt"></i></div>
+            <h3>Optimización</h3>
+            <p>Mejora de velocidad y rendimiento web.</p>
+          </div>
+          <div class="card">
+            <div class="icono"><i class="fas fa-shield-alt"></i></div>
+            <h3>Seguridad Web</h3>
+            <p>SSL, protección básica y configuración segura.</p>
+          </div>
+          <div class="card">
+            <div class="icono"><i class="fas fa-plug"></i></div>
+            <h3>Integraciones</h3>
+            <p>Formularios, Analytics, correos y más herramientas.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="proyectos" class="proyectos">
+    <div class="container">
+      <h2>Proyectos</h2>
+      <div class="cards">
+        <div class="card proyecto">
+          <img src="images/SunorPortafolio.png" alt="Proyecto E-commerce Sunor" class="imagen-proyecto">
+          <div class="contenido-card">
+            <h3>Plataforma E-commerce - Sunor</h3>
+            <p class="descripcion">
+              Sitio web de comercio electrónico desarrollado para una tienda chilena. Incluye carrito de compras,
+              pasarela de pago y panel administrativo.
+            </p>
+            <p class="tecnologias"><strong>Tecnologías:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+            <div class="botones">
+              <a href="https://sunor.cl" target="_blank" class="btn">Visitar página web</a>
+              <a href="#" class="btn">Ver más detalles</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="proyectos">
+    <h2>Proyecto en Sunor</h2>
+    <div class="carrusel">
+      <div class="carrusel-track">
+        <div class="proyecto-card">
+          <img src="images/SunorPortafolio.png" alt="Proyecto 1">
+          <h3>Biografia de empresa</h3>
+          <p>Informacion breve y precisa de servicios y trayectoria.</p>
+        </div>
+        <!-- Puedes duplicar esto para más proyectos -->
+        <div class="proyecto-card">
+          <img src="images/SunorProductos.png" alt="Proyecto 1">
+          <h3>Productos</h3>
+          <p>Pagina de presentacion de productos con su descripcion y funcion de cotizacion directamente a su correo.
+          </p>
+        </div>
+
+        <!-- Puedes duplicar esto para más proyectos -->
+        <div class="proyecto-card">
+          <img src="images/ContactoSunor.png" alt="Proyecto 1">
+          <h3>Metodo de contacto</h3>
+          <p>Presentacion minimalista de metodo de contacto, con formulario para envio a su correo, junto a
+            implemntacion de google maps para ver el lugar fisico de la empresa.</p>
+        </div>
+      </div>
+      <button class="carrusel-prev">&#10094;</button>
+      <button class="carrusel-next">&#10095;</button>
+    </div>
+  </section>
+
+
+
+  <!-- Redes Sociales -->
+  <section class="contacto" id="contacto">
+    <h2>Contáctame</h2>
+    <div class="social-icons">
+      <a href="mailto:tuemail@ejemplo.com" title="Correo"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/569XXXXXXXX" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/TUUSUARIO" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+
+
+  <script>
+    const btn = document.getElementById('modo-btn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      btn.innerHTML = isDark
+        ? '<i class="fas fa-moon"></i> <span>Oscuro</span>'
+        : '<i class="fas fa-sun"></i> <span>Claro</span>';
+    });
+  </script>
+  <script>
+    const track = document.querySelector('.carrusel-track');
+    const prev = document.querySelector('.carrusel-prev');
+    const next = document.querySelector('.carrusel-next');
+    let index = 0;
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % track.children.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + track.children.length) % track.children.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+  </script>
+<script>
+  const menuBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+
+</html>
