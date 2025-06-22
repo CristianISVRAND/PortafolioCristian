@@ -754,45 +754,100 @@ section h2::after {
     box-shadow: none;
   }
 }
-/*Sobre mi responsivo*/
+/* Sección principal */
+.sobre-mi .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
+.sobre-mi .contenido {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Ícono */
+.sobre-mi .ilustracion {
+  flex-shrink: 0;
+   margin-right: 4rem; /* Ajusta el espacio entre el icono y el texto */  
+}
+
+.emoji-circle {
+  font-size: 3rem;
+  background-color: #8a2be2; /* Morado */
+  color: #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+/* Texto */
+.sobre-mi .texto {
+  flex: 1;
+}
+
+.titulo-sobremi {
+  margin-bottom: 1rem;
+}
+
+/* Botón */
+.btn-descargar {
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+/* Estilos base */
+.sobre-mi .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-mi .contenido {
+  display: flex;
+  align-items: center;
+}
+
+.sobre-mi .ilustracion {
+  margin-right: 7rem;
+}
+
+/* RESPONSIVE FIX */
 @media (max-width: 768px) {
   .sobre-mi .container {
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
+  .sobre-mi .contenido {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .sobre-mi .ilustracion {
+    margin: 0 auto 1rem auto; /* centro horizontal y separación del texto */
+    display: flex;
+    justify-content: center;
+    margin-left: 4rem;
+  }
+
   .sobre-mi .texto {
     max-width: 90%;
     text-align: center;
-    
   }
 
   .sobre-mi .btn-descargar {
     margin-top: 2rem;
-    display: inline-block;
   }
+
   .sobre-mi .titulo-sobremi {
-    margin-left: 6rem;
-  }
- 
-}
-
-/* Existing styles... */
-
-/* Responsive styles (for smaller screens) */
-@media (max-width: 768px) {
-  .sobre-mi .contenido {
-    flex-direction: column;
-    align-items: center; /* Centers horizontally */
-    text-align: center;   /* Centers text */
-  }
-
-   .sobre-mi .ilustracion {
-    /* ... otros estilos ... */
-    margin-left: 9rem !important; /* Fuerza el margen a 0 */
-    margin-bottom: 3rem;
+    margin: 0 auto;
   }
 }
