@@ -817,7 +817,6 @@ section h2::after {
   margin-right: 7rem;
 }
 
-/* RESPONSIVE FIX */
 @media (max-width: 768px) {
   .sobre-mi .container {
     flex-direction: column;
@@ -832,22 +831,29 @@ section h2::after {
   }
 
   .sobre-mi .ilustracion {
-    margin: 0 auto 1rem auto; /* centro horizontal y separación del texto */
+    margin: 0 auto 1rem auto; /* CENTRADO */
     display: flex;
     justify-content: center;
-    margin-left: 4rem;
+  }
+
+  .emoji-circle {
+    width: 120px;
+    height: 120px;
+    font-size: 3.5rem;
   }
 
   .sobre-mi .texto {
     max-width: 90%;
+    padding: 0 1rem;
     text-align: center;
   }
 
-  .sobre-mi .btn-descargar {
+  .btn-descargar {
     margin-top: 2rem;
   }
 
-  .sobre-mi .titulo-sobremi {
-    margin: 0 auto;
+  .titulo-sobremi {
+    margin-bottom: 1rem;
   }
 }
+
