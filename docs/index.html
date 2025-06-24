@@ -8,31 +8,33 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6c4eb6">
 
 
 </head>
 
 <body>
-<header class="navbar">
-  <div class="logo">Portafolio</span></div>
+  <header class="navbar">
+    <div class="logo">Portafolio</span></div>
 
-  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
 
-  <nav class="nav-links">
-    <a href="#inicio">Inicio</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-  <!-- Mover el botón fuera de .nav-links -->
-  <button id="modo-btn" class="modo-toggle">
-    <i class="fas fa-sun"></i>
-    <span>Claro</span>
-  </button>
-</header>
+    <!-- Mover el botón fuera de .nav-links -->
+    <button id="modo-btn" class="modo-toggle">
+      <i class="fas fa-sun"></i>
+      <span>Claro</span>
+    </button>
+  </header>
 
 
 
@@ -45,31 +47,36 @@
   </section>
 
 
-<section id="sobre-mi" class="sobre-mi">
-  <div class="container">
-    <div class="contenido">
-      <div class="ilustracion">
-        <div class="emoji-circle">👨‍💻</div>
-      </div>
-      <div class="texto">
-        <div class="titulo-sobremi">
-          <h2>Sobre mí</h2>
+  <section id="sobre-mi" class="sobre-mi">
+    <div class="container">
+      <div class="contenido">
+        <div class="ilustracion">
+          <div class="emoji-circle">👨‍💻</div>
         </div>
-        <br />
-        <p style="margin-top: 2rem;">
-          Soy Cristian Ramírez, ingeniero en informática de 22 años con una fuerte orientación al desarrollo web y la mejora continua. Me especializo en crear interfaces modernas, funcionales y adaptables a distintos dispositivos.
-        </p>
-        <p>
-          A lo largo de mi formación y proyectos personales, he adquirido experiencia con tecnologías como HTML, CSS, JavaScript, Node.js y bases de datos Oracle usando PL/SQL. También he explorado áreas como ciberseguridad básica y análisis de datos con Power BI.
-        </p>
-        <p>
-          Me motiva seguir aprendiendo y creciendo profesionalmente, con el objetivo de aportar soluciones que generen valor real tanto en la experiencia del usuario como en los procesos técnicos detrás.
-        </p>
-        <a href="archivos/CristianRamirez.pdf" download class="btn-descargar">Descargar CV</a>
+        <div class="texto">
+          <div class="titulo-sobremi">
+            <h2>Sobre mí</h2>
+          </div>
+          <br />
+          <p style="margin-top: 2rem;">
+            Soy Cristian Ramírez, ingeniero en informática de 22 años con una fuerte orientación al desarrollo web y la
+            mejora continua. Me especializo en crear interfaces modernas, funcionales y adaptables a distintos
+            dispositivos.
+          </p>
+          <p>
+            A lo largo de mi formación y proyectos personales, he adquirido experiencia con tecnologías como HTML, CSS,
+            JavaScript, Node.js y bases de datos Oracle usando PL/SQL. También he explorado áreas como ciberseguridad
+            básica y análisis de datos con Power BI.
+          </p>
+          <p>
+            Me motiva seguir aprendiendo y creciendo profesionalmente, con el objetivo de aportar soluciones que generen
+            valor real tanto en la experiencia del usuario como en los procesos técnicos detrás.
+          </p>
+          <a href="archivos/CristianRamirez.pdf" download class="btn-descargar">Descargar CV</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <section class="habilidades" id="habilidades">
@@ -158,12 +165,13 @@
           <div class="contenido-card">
             <h3>Plataforma E-commerce - Sunor</h3>
             <p class="descripcion">
-              Sitio web de comercio electrónico desarrollado para una tienda chilena. Incluye sistema de cotizacion, visualizacion de servicios, ubicacion y contacto.
+              Sitio web de comercio electrónico desarrollado para una tienda chilena. Incluye sistema de cotizacion,
+              visualizacion de servicios, ubicacion y contacto.
             </p>
             <p class="tecnologias"><strong>Tecnologías:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
             <div class="botones">
               <a href="https://sunor.cl" target="_blank" class="btn">Visitar página web</a>
-              
+
             </div>
           </div>
         </div>
@@ -241,18 +249,27 @@
       track.style.transform = `translateX(-${index * 100}%)`;
     });
   </script>
-<script>
-  const menuBtn = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  <script>
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('✅ Service Worker registrado', reg))
+      .catch(err => console.error('❌ Error al registrar SW', err));
+  }
 </script>
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnSubir">
-  <i class="fas fa-arrow-up"></i>
-</button>
- <a href="https://wa.me/56933542751" target="_blank" class="btn-flotante" title="WhatsApp">
+
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnSubir">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <a href="https://wa.me/56933542751" target="_blank" class="btn-flotante" title="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 </body>
