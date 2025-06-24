@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/PortafolioCristian/manifest.json">
   <meta name="theme-color" content="#6c4eb6">
+
 
 
 </head>
@@ -102,7 +103,7 @@
         <div class="card">
           <div class="icono">🎨</div>
           <h3>Diseño</h3>
-          <p>Figma, UI/UX, Canva</p>
+          <p>UI/UX, Canva</p>
         </div>
 
       </div>
@@ -258,19 +259,19 @@
     });
   </script>
 
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/PortafolioCristian/sw.js')
-        .then(reg => {
-          console.log('✅ Service Worker registrado con éxito:', reg.scope);
-        })
-        .catch(err => {
-          console.error('❌ Error al registrar el Service Worker:', err);
-        });
-    });
-  }
-</script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/PortafolioCristian/sw.js')
+          .then(reg => {
+            console.log('✅ Service Worker registrado con éxito:', reg.scope);
+          })
+          .catch(err => {
+            console.error('❌ Error al registrar el Service Worker:', err);
+          });
+      });
+    }
+  </script>
 
 
 
