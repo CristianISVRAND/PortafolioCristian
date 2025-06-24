@@ -8,12 +8,12 @@
   "description": "Portafolio web de Cristian Ramírez - desarrollador web e ingeniero en informática.",
   "icons": [
     {
-      "src": "/PortafolioCristian/icons/icon-192.png",
+      "src": "/PortafolioCristian/icons/icons-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/PortafolioCristian/icons/icon-512.png",
+      "src": "/PortafolioCristian/icons/icons-192.png",
       "sizes": "512x512",
       "type": "image/png"
     }
