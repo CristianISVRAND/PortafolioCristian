@@ -908,3 +908,80 @@ section h2::after {
     padding: 0 2rem;
   }
 }
+
+
+#btnSubir {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 52px;
+  height: 52px;
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 0.2s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* ← Elimina el cuadrado en móviles */
+}
+
+#btnSubir:hover {
+  transform: scale(1.1);
+}
+
+#btnSubir:focus {
+  outline: none;
+  box-shadow: none; /* ← Esto evita el borde azul */
+}
+
+#btnSubir:active {
+  transform: scale(0.95);
+  background-color: #7623cc;
+}
+
+/* Firefox específico: elimina borde interno */
+#btnSubir::-moz-focus-inner {
+  border: 0;
+}
+
+/*Boton whattsapp*/
+
+.btn-flotante {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.2s ease;
+  /* Elimina esto: display: block; */
+}
+
+.btn-flotante i {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* Mostrar solo en móviles */
+@media (min-width: 769px) {
+  .btn-flotante {
+    display: none;
+  }
+}
