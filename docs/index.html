@@ -270,14 +270,31 @@
 </script>
 
 
+<button id="btn-instalar" style="display:none">Instalar App</button>
+
+<script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.getElementById('btn-instalar').style.display = 'block';
+
+    document.getElementById('btn-instalar').addEventListener('click', () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(choice => {
+        if (choice.outcome === 'accepted') {
+          console.log('✅ App instalada');
+        } else {
+          console.log('❌ Instalación cancelada');
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
+</script>
 
 
-  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnSubir">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-  <a href="https://wa.me/56933542751" target="_blank" class="btn-flotante" title="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
 </body>
 
 </html>
