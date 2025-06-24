@@ -259,12 +259,15 @@
   </script>
 
   <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('✅ Service Worker registrado', reg))
-      .catch(err => console.error('❌ Error al registrar SW', err));
-  }
-</script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('✅ SW registrado', reg))
+          .catch(err => console.log('❌ SW fallo', err));
+      });
+    }
+  </script>
+
 
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnSubir">
     <i class="fas fa-arrow-up"></i>
