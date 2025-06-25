@@ -1,12 +1,12 @@
 const CACHE_NAME = 'portafolio-cache-v1';
 const urlsToCache = [
-  './',
-  './index.html',
-  './styles.css',
-  './main.js',
-  './manifest.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png'
+  '/PortafolioCristian/',
+  '/PortafolioCristian/index.html',
+  '/PortafolioCristian/styles.css',
+  '/PortafolioCristian/main.js',
+  '/PortafolioCristian/manifest.json',
+  '/PortafolioCristian/icons/icon-192.png',
+  '/PortafolioCristian/icons/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
