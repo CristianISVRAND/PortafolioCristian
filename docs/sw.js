@@ -3,7 +3,6 @@ const urlsToCache = [
   '/PortafolioCristian/',
   '/PortafolioCristian/index.html',
   '/PortafolioCristian/styles.css',
-  '/PortafolioCristian/main.js',
   '/PortafolioCristian/manifest.json',
   '/PortafolioCristian/icons/icon-192.png',
   '/PortafolioCristian/icons/icon-512.png',
