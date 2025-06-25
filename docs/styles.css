@@ -985,15 +985,25 @@ section h2::after {
     display: none;
   }
 }
-.qr-container {
-  margin-top: 2rem;
+
+
+.qr-section {
   text-align: center;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 400px;
 }
 
-.qr-container img {
-  margin-top: 0.5rem;
-  width: 160px;
-  height: 160px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.qr-section h2 {
+  margin-bottom: 1rem;
 }
+
+.qr-img {
+  width: 200px;
+  height: 200px;
+  margin-top: 1rem;
+}
+
