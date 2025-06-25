@@ -6,8 +6,11 @@ const urlsToCache = [
   '/PortafolioCristian/main.js',
   '/PortafolioCristian/manifest.json',
   '/PortafolioCristian/icons/icon-192.png',
-  '/PortafolioCristian/icons/icon-512.png'
+  '/PortafolioCristian/icons/icon-512.png',
+  '/PortafolioCristian/images/favicon-32x32.png',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'
 ];
+
 
 self.addEventListener('install', event => {
   event.waitUntil(
