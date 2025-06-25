@@ -987,23 +987,10 @@ section h2::after {
 }
 
 
-.qr-section {
-  text-align: center;
-  margin: 4rem auto;
-  padding: 2rem;
-  background-color: var(--bg-color);
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 400px;
-}
-
-.qr-section h2 {
-  margin-bottom: 1rem;
-}
-
-.qr-img {
-  width: 200px;
-  height: 200px;
-  margin-top: 1rem;
+#btnInstalar {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 999;
 }
 

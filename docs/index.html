@@ -270,20 +270,56 @@
         .catch(err => console.error('❌ SW error', err));
     }
   </script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
 
-    if (isStandalone) {
-      const whatsappBtn = document.querySelector('.btn-flotante');
-      if (whatsappBtn) {
-        whatsappBtn.style.display = 'none';
+      if (isStandalone) {
+        const whatsappBtn = document.querySelector('.btn-flotante');
+        if (whatsappBtn) {
+          whatsappBtn.style.display = 'none';
+        }
       }
-    }
-  });
-</script>
+    });
+  </script>
 
 
+  <script>
+    let deferredPrompt;
+
+    // Captura el evento que dispara la posibilidad de instalar
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault(); // Evita que aparezca automáticamente
+      deferredPrompt = e;
+
+      const installBtn = document.getElementById('btnInstalar');
+      installBtn.style.display = 'inline-block';
+
+      installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt(); // Muestra el diálogo de instalación
+          const result = await deferredPrompt.userChoice;
+
+          if (result.outcome === 'accepted') {
+            console.log('App instalada');
+          } else {
+            console.log('Instalación cancelada');
+          }
+
+          deferredPrompt = null;
+          installBtn.style.display = 'none';
+        }
+      });
+    });
+
+    // Oculta el botón si ya está instalada
+    window.addEventListener('DOMContentLoaded', () => {
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+      if (isStandalone) {
+        document.getElementById('btnInstalar')?.remove();
+      }
+    });
+  </script>
 
 
 
@@ -298,15 +334,10 @@
   <a href="https://wa.me/56933542751" target="_blank" class="btn-flotante" title="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-<section id="qr" class="qr-section">
-  <h2>Instala mi App</h2>
-  <p>Escanea el código QR con tu teléfono para instalar la versión PWA.</p>
-  <img 
-    src="https://api.qrserver.com/v1/create-qr-code/?data=https://TUUSUARIO.github.io/PortafolioCristian/&size=200x200" 
-    alt="QR para instalar PWA" 
-    class="qr-img"
-  >
-</section>
+  <button id="btnInstalar" class="btn-descargar" style="display: none;">
+    📲 Instalar aplicación
+  </button>
+
 
 
 </body>
