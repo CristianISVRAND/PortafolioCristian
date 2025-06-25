@@ -985,3 +985,15 @@ section h2::after {
     display: none;
   }
 }
+.qr-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.qr-container img {
+  margin-top: 0.5rem;
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

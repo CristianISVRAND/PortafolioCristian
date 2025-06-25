@@ -261,7 +261,7 @@
       navLinks.classList.toggle('active');
     });
   </script>
-  <!-- Antes de cerrar </body> o en main.js -->
+
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/PortafolioCristian/sw.js')
@@ -270,6 +270,24 @@
         .catch(err => console.error('❌ SW error', err));
     }
   </script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+    if (isStandalone) {
+      const whatsappBtn = document.querySelector('.btn-flotante');
+      if (whatsappBtn) {
+        whatsappBtn.style.display = 'none';
+      }
+    }
+  });
+</script>
+
+
+
+
+
+
 
 
   <button id="btn-instalar" style="display:none">Instalar App</button>
